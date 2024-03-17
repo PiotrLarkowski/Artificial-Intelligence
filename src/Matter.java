@@ -28,7 +28,7 @@ public class Matter {
     public String toString() {
         return "Matter{" +
                 "nameOfMatter='" + nameOfMatter + '\'' +
-                ", importantForMatter=" + Arrays.toString(importantForMatter) +
+                ", importantForMatter=" + importantForMatter +
                 '}';
     }
 }
