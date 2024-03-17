@@ -1,16 +1,22 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Matter {
     public String nameOfMatter;
-    private String[] importantForMatter = new String[10];
+    private List<String> importantForMatter = new ArrayList<>();
     public Matter(){
 
     }
+
     public Matter(String newMatter){
+        //TODO automatic creation for element in list
         this.nameOfMatter = newMatter;
-        importantForMatter[0] = "Why - " + Person.getPersonality().getItem(0); //TODO automatic creation for element in list
-        importantForMatter[1] = "Who - Alarm";
-        importantForMatter[2] = "When - " +java.time.LocalTime.now();
+        ArrayList<Reasons> listOfReasons = Person.getPersonality().getListOfReasons();
+        for (Reasons reason : listOfReasons) {
+            importantForMatter.add(reason.getNameOfReason() + Person.getPersonality().getItem(0));
+        }
+        importantForMatter.add("When - " + java.time.LocalTime.now());
         Person.listOfMatters.add(this);
     }
 
