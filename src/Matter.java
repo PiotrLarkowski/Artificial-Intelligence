@@ -8,9 +8,9 @@ public class Matter {
     }
     public Matter(String newMatter){
         this.nameOfMatter = newMatter;
-        importantForMatter[0] = "Why - Job";
-        importantForMatter[1] = "How - Alarm";
-        importantForMatter[2] = "When - " +java.time.LocalTime.now().toString();
+        importantForMatter[0] = "Why - " + Person.getPersonality().getItem(0); //TODO automatic creation for element in list
+        importantForMatter[1] = "Who - Alarm";
+        importantForMatter[2] = "When - " +java.time.LocalTime.now();
         Person.listOfMatters.add(this);
     }
 

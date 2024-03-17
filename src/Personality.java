@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Personality {
     private ArrayList<String> toDoList = new ArrayList<>();
+    private ArrayList<Item> listOfKnowItems = new ArrayList<>();
     private ArrayList<Integer> toDoListWeight = new ArrayList<>();
     public String getMatterWithHighestWeight(){
         int max = 0;
@@ -19,5 +20,13 @@ public class Personality {
         int weight = Matter.getWeight();
         toDoList.add(matter);
         toDoListWeight.add(weight);
+    }
+    public void addNewItem(String nameOfItem){
+        Item item = new Item(nameOfItem);
+        listOfKnowItems.add(item);
+    }
+
+    public String getItem(int index) {
+        return listOfKnowItems.get(index).getName();
     }
 }

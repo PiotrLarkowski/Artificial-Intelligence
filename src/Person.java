@@ -21,5 +21,7 @@ public class Person {
         }
         return presentMatter;
     }
-
+    public static Personality getPersonality(){
+        return personality;
+    }
 }
