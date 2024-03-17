@@ -11,7 +11,7 @@ public class Person {
         personality.Update(matter);
     }
     public Matter whatToDo(){
-        String stringMatter = personality.Update();
+        String stringMatter = personality.getMatterWithHighestWeight();
         Matter presentMatter = new Matter();
         for(Matter matter: listOfMatters){
             if(matter.nameOfMatter.equals(stringMatter)){

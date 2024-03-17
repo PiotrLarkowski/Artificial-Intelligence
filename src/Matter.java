@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Matter {
     public String nameOfMatter;
@@ -15,5 +16,13 @@ public class Matter {
 
     public int getWeight() {
         return 5;
+    }
+
+    @Override
+    public String toString() {
+        return "Matter{" +
+                "nameOfMatter='" + nameOfMatter + '\'' +
+                ", importantForMatter=" + Arrays.toString(importantForMatter) +
+                '}';
     }
 }
